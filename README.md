@@ -76,16 +76,23 @@ The project includes a GitHub Actions workflow that automatically deploys your s
 1. **Update repository name** in `vite.config.ts`:
 
    ```typescript
-   const repoName = "your-repo-name"; // Change this to your GitHub repository name
+   const repoName = "portfolio"; // Change this to your GitHub repository name
    ```
 
 2. **Enable GitHub Pages**:
 
    - Go to your repository Settings → Pages
-   - Under "Source", select "GitHub Actions"
-   - The workflow will automatically deploy on push to `main`
+   - Under "Source", select **"GitHub Actions"** (not "Deploy from a branch")
+   - Save
 
-3. **Push your code**:
+3. **Fix Environment Protection** (if needed):
+
+   - Go to Settings → Environments
+   - Click on `github-pages` environment
+   - Under "Deployment branches", ensure `main` branch is allowed
+   - Or delete the environment to let GitHub recreate it without restrictions
+
+4. **Push your code**:
 
    ```bash
    git add .
@@ -93,11 +100,11 @@ The project includes a GitHub Actions workflow that automatically deploys your s
    git push origin main
    ```
 
-4. Your site will be available at `https://<username>.github.io/<repo-name>/`
+5. Your site will be available at `https://aleemath.github.io/portfolio/`
 
-### Option 2: Manual Deployment
+### Option 2: Manual Deployment (Alternative)
 
-If you prefer manual deployment:
+If you prefer manual deployment using the `gh-pages` branch:
 
 1. **Install gh-pages** (if not already installed):
 
@@ -114,9 +121,44 @@ If you prefer manual deployment:
    ```
 
 4. **Configure GitHub Pages**:
+
    - Go to Settings → Pages
-   - Select `gh-pages` branch as source
-   - Your site will be live at `https://<username>.github.io/<repo-name>/`
+   - Under "Source", select **"Deploy from a branch"**
+   - Select Branch: `gh-pages` and Folder: `/ (root)`
+   - Click Save
+
+5. Your site will be live at `https://aleemath.github.io/portfolio/`
+
+### Troubleshooting
+
+#### GitHub Pages Shows 404
+
+1. **Verify GitHub Pages Configuration**:
+
+   - Ensure GitHub Pages is set to use **"GitHub Actions"** as source
+   - Check the Actions tab to see if workflow ran successfully
+
+2. **Check Base Path**:
+
+   - The base path is set to `/portfolio/` in `vite.config.ts`
+   - Make sure you're accessing: `https://aleemath.github.io/portfolio/` (with trailing slash)
+
+3. **Environment Protection Error**:
+
+   - If you see "Branch 'main' is not allowed to deploy":
+     - Go to Settings → Environments → `github-pages`
+     - Allow `main` branch under "Deployment branches"
+     - Or delete the environment to recreate it without restrictions
+
+4. **Clear Cache**:
+
+   - Hard refresh: `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (Mac)
+   - Open in incognito/private window
+   - Clear browser cache
+
+5. **Wait for Deployment**:
+   - GitHub Pages deployments can take 1-2 minutes
+   - Check the Actions tab to see deployment status
 
 ### Important Notes
 
