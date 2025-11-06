@@ -121,7 +121,10 @@ export default function ContactForm() {
         />
       </div>
       <div className="flex justify-end">
-        <button type="submit" className="btn btn-primary w-max p-2 rounded-md">
+        <button
+          type="submit"
+          className="btn btn-primary rounded-md px-6 py-3 text-base font-medium w-full sm:w-auto"
+        >
           Submit Message
         </button>
       </div>

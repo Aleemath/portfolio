@@ -38,7 +38,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
   return (
     <section
       id="testimonials"
-      className="bg-white relative container mx-auto px-6 py-20"
+      className="bg-white relative container mx-auto px-4 sm:px-6 py-12 sm:py-20"
     >
       {/* Scattered dots */}
       <div className="absolute top-16 left-8 w-2 h-2 bg-red-500 rounded-full opacity-60"></div>
@@ -47,20 +47,20 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
       <div className="absolute top-20 right-8 w-2 h-2 bg-green-500 rounded-full opacity-60"></div>
       <div className="absolute top-28 right-12 w-2 h-2 bg-yellow-500 rounded-full opacity-60"></div>
 
-      <div className="mb-12">
-        <div className="mb-6">
-          <div className="egg-shape inline-block border border-primary text-primary font-medium text-sm px-6 py-2">
+      <div className="mb-8 sm:mb-12">
+        <div className="mb-4 sm:mb-6">
+          <div className="egg-shape inline-block border border-primary text-primary font-medium text-sm px-4 sm:px-6 py-2">
             Reviews
           </div>
         </div>
-        <div className="flex items-center justify-between">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-neutral">
-            Our Customer Say <br />
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-neutral">
+            Our Customer Say <br className="hidden sm:block" />
             Something <span className="text-primary">About Us</span>
           </h2>
           {/* Navigation arrows on top right */}
           {slides.length > 1 && (
-            <div className="flex gap-2">
+            <div className="flex gap-2 shrink-0">
               <button
                 onClick={goToPrevious}
                 disabled={currentSlide === 0}
@@ -71,7 +71,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                 }`}
                 aria-label="Previous slide"
               >
-                <GoArrowLeft className="w-6 h-6" />
+                <GoArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
               <button
                 onClick={goToNext}
@@ -83,7 +83,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                 }`}
                 aria-label="Next slide"
               >
-                <GoArrowRight className="w-6 h-6" />
+                <GoArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
             </div>
           )}

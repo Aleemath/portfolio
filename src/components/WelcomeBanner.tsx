@@ -39,7 +39,7 @@ export default function WelcomeBanner({
   ];
 
   return (
-    <section id="about" className="bg-white py-20 relative">
+    <section id="about" className="bg-white py-12 sm:py-20 relative">
       {/* Decorative dots - scattered multi-colored */}
       <div className="absolute top-20 left-10 w-2 h-2 bg-red-500 rounded-full opacity-70"></div>
       <div className="absolute top-40 left-32 w-2 h-2 bg-yellow-500 rounded-full opacity-70"></div>
@@ -52,38 +52,38 @@ export default function WelcomeBanner({
       <div className="absolute top-48 right-12 w-2 h-2 bg-blue-500 rounded-full opacity-70"></div>
       <div className="absolute top-64 right-20 w-2 h-2 bg-yellow-500 rounded-full opacity-70"></div>
 
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="relative z-10">
-            <div className="egg-shape inline-block border border-primary text-primary font-medium text-sm mb-6 py-2 px-6">
+            <div className="egg-shape inline-block border border-primary text-primary font-medium text-sm mb-6 py-2 px-4 sm:px-6">
               Welcome
             </div>
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-neutral">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-neutral">
               I have <span className="text-primary">Full Stack</span>
               <br />
               <span className="text-primary">Development</span> Experience
             </h1>
-            <p className="mt-6 text-base lg:text-lg text-neutral/70 max-w-xl leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg text-neutral/70 max-w-xl leading-relaxed">
               I'm {name}, a {role}. I've been helping businesses to solve their
               problems with my development skills for {experience} years.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
               <a
                 href="#contact"
-                className="btn btn-primary rounded-md px-6 py-3 text-base font-medium"
+                className="btn btn-primary rounded-md px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-medium w-full sm:w-auto text-center"
               >
                 Contact Me
               </a>
               <a
                 href="#portfolio"
-                className="inline-flex items-center gap-2 text-base text-neutral/70 hover:text-primary transition-colors font-medium"
+                className="inline-flex items-center gap-2 text-sm sm:text-base text-neutral/70 hover:text-primary transition-colors font-medium w-full sm:w-auto justify-center sm:justify-start"
               >
                 View Portfolio{" "}
                 <FaArrowUp className="w-4 h-4 text-primary rotate-45" />
               </a>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative hidden lg:block">
             {/* green block behind */}
             <div className="absolute -top-6 left-20 h-64 w-60 lg:h-96 lg:w-80 bg-primary/80 z-0"></div>
             {/* black outline square overlay - above green */}

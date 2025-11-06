@@ -27,7 +27,7 @@ export default function Portfolio({ images }: PortfolioProps) {
   };
 
   return (
-    <section id="portfolio" className="bg-white py-20 relative">
+    <section id="portfolio" className="bg-white py-12 sm:py-20 relative">
       {/* Scattered dots */}
       <div className="absolute top-12 right-8 w-2 h-2 bg-red-500 rounded-full opacity-60"></div>
       <div className="absolute top-20 right-12 w-2 h-2 bg-green-500 rounded-full opacity-60"></div>
@@ -35,24 +35,24 @@ export default function Portfolio({ images }: PortfolioProps) {
       <div className="absolute top-16 left-8 w-2 h-2 bg-green-500 rounded-full opacity-60"></div>
       <div className="absolute top-24 left-12 w-2 h-2 bg-yellow-500 rounded-full opacity-60"></div>
 
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left copy */}
           <div>
-            <div className="egg-shape inline-block border border-primary text-primary font-medium text-sm px-6 py-2 mb-6">
+            <div className="egg-shape inline-block border border-primary text-primary font-medium text-sm px-4 sm:px-6 py-2 mb-6">
               Portfolio
             </div>
-            <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-neutral">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-neutral">
               My Creative Works
               <br />
               Latest <span className="text-primary">Projects</span>
             </h2>
-            <p className="mt-6 text-base lg:text-lg text-neutral/70 max-w-xl leading-relaxed">
+            <p className="mt-6 text-sm sm:text-base lg:text-lg text-neutral/70 max-w-xl leading-relaxed">
               I have developed various enterprise-level applications including
               School Management Systems, Therapy Center Systems, ERP and CRM
               solutions. Here are some of my recent projects.
             </p>
-            <a className="btn btn-primary rounded-md mt-10 px-6 py-3 text-base font-medium inline-block">
+            <a className="btn btn-primary rounded-md mt-8 sm:mt-10 px-6 py-3 text-sm sm:text-base font-medium inline-block w-full sm:w-auto text-center">
               Show More
             </a>
           </div>
@@ -109,7 +109,7 @@ export default function Portfolio({ images }: PortfolioProps) {
                   }`}
                   aria-label="Previous slide"
                 >
-                  <GoArrowLeft className="w-6 h-6" />
+                  <GoArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
                 <button
                   onClick={goToNext}
@@ -121,7 +121,7 @@ export default function Portfolio({ images }: PortfolioProps) {
                   }`}
                   aria-label="Next slide"
                 >
-                  <GoArrowRight className="w-6 h-6" />
+                  <GoArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
               </div>
             </div>

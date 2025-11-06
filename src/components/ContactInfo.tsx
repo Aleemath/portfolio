@@ -34,33 +34,33 @@ export default function ContactInfo({
       {contactItems.map((item) => {
         const IconComponent = item.icon;
         return (
-          <div key={item.label} className="flex items-center gap-4">
+          <div key={item.label} className="flex items-start gap-4">
             <div
               className="w-12 h-12 rounded-lg bg-primary text-primary-content flex items-center justify-center shrink-0"
               aria-hidden="true"
             >
               <IconComponent className="w-5 h-5" />
             </div>
-            <div>
-              <p className="text-sm text-muted-foreground text-gray-400">
-                {item.label}
-              </p>
+            <div className="min-w-0 flex-1">
+              <p className="text-sm text-neutral/60 mb-1">{item.label}</p>
               {item.label === "Email me" ? (
                 <a
                   href={`mailto:${item.value}`}
-                  className="font-bold hover:text-primary transition"
+                  className="font-semibold text-base text-neutral hover:text-primary transition break-all"
                 >
                   {item.value}
                 </a>
               ) : item.label === "Call me" ? (
                 <a
                   href={`tel:${item.value.replace(/\s/g, "")}`}
-                  className="font-bold hover:text-primary transition"
+                  className="font-semibold text-base text-neutral hover:text-primary transition"
                 >
                   {item.value}
                 </a>
               ) : (
-                <p className="font-bold">{item.value}</p>
+                <p className="font-semibold text-base text-neutral">
+                  {item.value}
+                </p>
               )}
             </div>
           </div>

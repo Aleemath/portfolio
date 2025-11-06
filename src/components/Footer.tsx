@@ -55,11 +55,13 @@ export default function Footer({
       </div>
 
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-neutral/60 text-sm">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <p className="text-neutral/60 text-sm whitespace-nowrap">
             © {currentYear}. All Rights Reserved
           </p>
-          <p className="text-neutral/60 text-sm">Designed by {designerName}</p>
+          <p className="text-neutral/60 text-sm whitespace-nowrap">
+            Designed by {designerName}
+          </p>
           <div className="flex gap-3">
             {socialIcons.map(({ Icon, href, platform }) => (
               <a

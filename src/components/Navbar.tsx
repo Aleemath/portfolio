@@ -18,20 +18,20 @@ export default function Navbar({
 }: NavbarProps) {
   return (
     <div className="navbar bg-white fixed top-0 z-40 w-full shadow-sm">
-      <div className="mx-auto w-full max-w-screen-2xl px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-6 py-4">
+      <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-2 sm:gap-4 lg:gap-6 py-4">
           <a
             href="#about"
-            className="inline-flex items-center gap-3"
+            className="inline-flex items-center gap-2 sm:gap-3 shrink-0"
             aria-label="Home"
           >
             <span
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-content text-xl font-bold"
+              className="inline-flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-primary text-primary-content text-lg sm:text-xl font-bold"
               aria-hidden="true"
             >
               {logoInitial}
             </span>
-            <span className="text-xl text-primary font-semibold">
+            <span className="text-lg sm:text-xl text-primary font-semibold whitespace-nowrap">
               {logoText}
             </span>
           </a>
@@ -50,7 +50,7 @@ export default function Navbar({
           <a
             href={cvPath}
             download={cvFileName}
-            className="btn btn-outline btn-primary rounded-md border-2 px-6 py-2 text-base font-medium"
+            className="btn btn-outline btn-primary rounded-md border-2 px-3 sm:px-6 py-2 text-xs sm:text-base font-medium whitespace-nowrap shrink-0"
           >
             Download CV
           </a>
