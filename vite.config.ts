@@ -9,4 +9,7 @@ const repoName = 'portfolio'; // Change this to your GitHub repository name
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: process.env.NODE_ENV === 'production' ? `/${repoName}/` : '/',
+  build: {
+    outDir: 'dist',
+  },
 })
