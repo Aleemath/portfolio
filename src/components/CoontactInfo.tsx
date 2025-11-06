@@ -36,7 +36,7 @@ export default function ContactInfo({
         return (
           <div key={item.label} className="flex items-center gap-4">
             <div
-              className="w-12 h-12 rounded-lg bg-primary text-primary-content flex items-center justify-center flex-shrink-0"
+              className="w-12 h-12 rounded-lg bg-primary text-primary-content flex items-center justify-center shrink-0"
               aria-hidden="true"
             >
               <IconComponent className="w-5 h-5" />

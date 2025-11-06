@@ -21,17 +21,6 @@ export default function Skills({ description }: SkillsProps) {
       id="skills"
       className="py-20 grid lg:grid-cols-2 gap-12 items-start relative"
     >
-      {/* Vertical dot pattern - right side */}
-      <div className="absolute right-0 top-0 bottom-0 w-8 hidden lg:block pointer-events-none">
-        {Array.from({ length: 20 }, (_, i) => (
-          <div
-            key={i}
-            className="absolute right-2 w-1.5 h-1.5 bg-primary/30 rounded-full"
-            style={{ top: `${i * 4}%` }}
-          />
-        ))}
-      </div>
-
       {/* Scattered dots */}
       <div className="absolute top-8 left-8 w-2 h-2 bg-green-500 rounded-full opacity-60"></div>
       <div className="absolute top-16 left-12 w-2 h-2 bg-red-500 rounded-full opacity-60"></div>

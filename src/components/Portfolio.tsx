@@ -28,17 +28,6 @@ export default function Portfolio({ images }: PortfolioProps) {
 
   return (
     <section id="portfolio" className="py-20 relative">
-      {/* Vertical dot pattern - left side */}
-      <div className="absolute left-0 top-0 bottom-0 w-8 hidden lg:block pointer-events-none">
-        {Array.from({ length: 18 }, (_, i) => (
-          <div
-            key={i}
-            className="absolute left-2 w-1.5 h-1.5 bg-primary/30 rounded-full"
-            style={{ top: `${i * 5}%` }}
-          />
-        ))}
-      </div>
-
       {/* Scattered dots */}
       <div className="absolute top-12 right-8 w-2 h-2 bg-red-500 rounded-full opacity-60"></div>
       <div className="absolute top-20 right-12 w-2 h-2 bg-green-500 rounded-full opacity-60"></div>

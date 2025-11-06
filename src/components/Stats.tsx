@@ -8,17 +8,6 @@ interface StatsProps {
 export default function Stats({ stats }: StatsProps) {
   return (
     <section className="py-12 relative">
-      {/* Vertical dot pattern - left side */}
-      <div className="absolute left-0 top-0 bottom-0 w-8 hidden lg:block pointer-events-none">
-        {Array.from({ length: 15 }, (_, i) => (
-          <div
-            key={i}
-            className="absolute left-2 w-1.5 h-1.5 bg-primary/30 rounded-full"
-            style={{ top: `${i * 6}%` }}
-          />
-        ))}
-      </div>
-
       {/* Scattered dots */}
       <div className="absolute top-4 right-8 w-2 h-2 bg-red-500 rounded-full opacity-60"></div>
       <div className="absolute top-8 right-12 w-2 h-2 bg-green-500 rounded-full opacity-60"></div>
