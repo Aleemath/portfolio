@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Force primary color to green for daisyUI theme - using daisyUI CSS variable format */
+:root,
+[data-theme="portfolio"] {
+  --p: #22C55E; /* primary */
+  --pc: #ffffff; /* primary-content */
+  --color-primary: #22C55E;
+  --color-primary-content: #ffffff;
+}
+
+/* Keep base minimal; theme colors come from daisyUI */
+html { 
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for fixed navbar */
+}
+
+/* Custom egg/oval shape for badges */
+.egg-shape {
+  border-radius: 50% / 60% 60% 40% 40%;
+}

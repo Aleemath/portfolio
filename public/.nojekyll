@@ -1,0 +1,5 @@
+# GitHub Pages deployment
+
+# This file ensures GitHub Pages doesn't process the site with Jekyll
+# Required for SPAs and static sites
+
