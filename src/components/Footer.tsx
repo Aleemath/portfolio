@@ -19,7 +19,7 @@ export default function Footer({
   ];
 
   return (
-    <footer className="border-t border-gray-400 border-border py-8 relative">
+    <footer className="bg-white border-t border-gray-200 py-8 relative">
       {/* Dense dot blocks - bottom corners */}
       <div className="absolute bottom-0 left-0 w-16 h-32 hidden lg:block pointer-events-none opacity-40">
         {Array.from({ length: 48 }, (_, i) => {
@@ -56,12 +56,10 @@ export default function Footer({
 
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm">
+          <p className="text-neutral/60 text-sm">
             © {currentYear}. All Rights Reserved
           </p>
-          <p className="text-muted-foreground text-sm">
-            Designed by {designerName}
-          </p>
+          <p className="text-neutral/60 text-sm">Designed by {designerName}</p>
           <div className="flex gap-3">
             {socialIcons.map(({ Icon, href, platform }) => (
               <a

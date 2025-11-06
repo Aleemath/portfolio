@@ -8,12 +8,27 @@
   --pc: #ffffff; /* primary-content */
   --color-primary: #22C55E;
   --color-primary-content: #ffffff;
+  color-scheme: light;
+}
+
+/* Force light theme - prevent dark mode */
+html,
+body {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  color-scheme: light;
 }
 
 /* Keep base minimal; theme colors come from daisyUI */
 html { 
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* Offset for fixed navbar */
+}
+
+body {
+  background-color: #ffffff;
+  color: #111827;
+  min-height: 100vh;
 }
 
 /* Custom egg/oval shape for badges */

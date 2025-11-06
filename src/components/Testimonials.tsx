@@ -38,7 +38,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
   return (
     <section
       id="testimonials"
-      className="relative container mx-auto px-6 py-20"
+      className="bg-white relative container mx-auto px-6 py-20"
     >
       {/* Scattered dots */}
       <div className="absolute top-16 left-8 w-2 h-2 bg-red-500 rounded-full opacity-60"></div>
@@ -47,12 +47,14 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
       <div className="absolute top-20 right-8 w-2 h-2 bg-green-500 rounded-full opacity-60"></div>
       <div className="absolute top-28 right-12 w-2 h-2 bg-yellow-500 rounded-full opacity-60"></div>
 
-      <div className="space-y-6 mb-12">
-        <div className="egg-shape inline-block border border-primary text-primary font-medium px-6 py-2 mx-auto hover:bg-primary/5 transition">
-          Reviews
+      <div className="mb-12">
+        <div className="mb-6">
+          <div className="egg-shape inline-block border border-primary text-primary font-medium text-sm px-6 py-2">
+            Reviews
+          </div>
         </div>
         <div className="flex items-center justify-between">
-          <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-neutral">
             Our Customer Say <br />
             Something <span className="text-primary">About Us</span>
           </h2>
@@ -106,9 +108,9 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                 {slideTestimonials.map((testimonial) => (
                   <div
                     key={testimonial.id}
-                    className="p-6 rounded-lg shadow space-y-4"
+                    className="p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white"
                   >
-                    <div className="flex gap-1">
+                    <div className="flex gap-1 mb-4">
                       {Array.from({ length: testimonial.rating }).map(
                         (_, starIndex) => (
                           <FaStar
@@ -119,9 +121,11 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                         )
                       )}
                     </div>
-                    <p className="text-muted-foreground">{testimonial.text}</p>
+                    <p className="text-neutral/70 text-sm leading-relaxed mb-4">
+                      {testimonial.text}
+                    </p>
 
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 items-center">
                       <div className="avatar">
                         <div className="w-12 mask mask-circle">
                           <img
@@ -132,8 +136,10 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
                         </div>
                       </div>
                       <div>
-                        <p className="font-bold">{testimonial.name}</p>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="font-bold text-base text-neutral">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-sm text-neutral/60">
                           {testimonial.role}
                           {testimonial.company && ` ${testimonial.company}`}
                         </p>

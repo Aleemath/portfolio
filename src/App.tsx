@@ -17,9 +17,9 @@ import {
 
 export default function App() {
   return (
-    <div className="relative">
+    <div className="relative bg-white min-h-screen">
       <Navbar />
-      <main className="mx-auto max-w-screen-2xl px-6 lg:px-8 pt-20 relative z-10">
+      <main className="pt-20 relative z-10 bg-white">
         <WelcomeBanner />
         <Stats stats={STATS} />
         <Skills />
