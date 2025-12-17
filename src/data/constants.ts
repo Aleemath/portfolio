@@ -9,10 +9,10 @@ export const PERSONAL_INFO = {
   name: "Aleemath Ranseena",
   role: "Full Stack Developer",
   experience: "2+",
-  phone: "+971 527989668",
+  phone: "+91 7306111959",
   email: "aleemathranseenakk@gmail.com",
   address: "Kalpetta, Wayanad, Kerala",
-  whatsappNumber: "971527989668", // Format without + for wa.me links
+  whatsappNumber: "917306111959", // Format without + for wa.me links
   cvPath: "/src/assets/pdf/aleemath-ranseena-fullstack-developer.pdf",
   profilePhoto: "/src/assets/images/photo.png",
 } as const;
