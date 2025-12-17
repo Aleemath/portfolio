@@ -4,6 +4,7 @@ import { PERSONAL_INFO } from "../data/constants";
 
 interface ContactProps {
   phone?: string;
+
   email?: string;
   address?: string;
 }

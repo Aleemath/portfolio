@@ -1,4 +1,4 @@
-import cvPdf from "../assets/pdf/aleemath-ranseena-fullstack-developer-uae.pdf";
+import cvPdf from "../assets/pdf/aleemath-ranseena-fullstack-developer.pdf";
 import { NAV_LINKS } from "../data/constants";
 
 interface NavbarProps {
@@ -14,7 +14,7 @@ export default function Navbar({
   logoInitial = "t",
   navLinks = NAV_LINKS,
   cvPath = cvPdf,
-  cvFileName = "aleemath-ranseena-fullstack-developer-uae.pdf",
+  cvFileName = "aleemath-ranseena-fullstack-developer.pdf",
 }: NavbarProps) {
   return (
     <div className="navbar bg-white fixed top-0 z-40 w-full shadow-sm">

@@ -8,12 +8,12 @@ import work4 from "../assets/images/work4.jpeg";
 export const PERSONAL_INFO = {
   name: "Aleemath Ranseena",
   role: "Full Stack Developer",
-  experience: "3+",
+  experience: "2+",
   phone: "+971 527989668",
   email: "aleemathranseenakk@gmail.com",
-  address: "Wasl Village, Al Qusais Industrial Area 5, Dubai",
+  address: "Kalpetta, Wayanad, Kerala",
   whatsappNumber: "971527989668", // Format without + for wa.me links
-  cvPath: "/src/assets/pdf/aleemath-ranseena-fullstack-developer-uae.pdf",
+  cvPath: "/src/assets/pdf/aleemath-ranseena-fullstack-developer.pdf",
   profilePhoto: "/src/assets/images/photo.png",
 } as const;
 
@@ -40,9 +40,9 @@ export interface StatItem {
 }
 
 export const STATS: StatItem[] = [
-  { value: "80+", label: "Satisfied clients" },
-  { value: "200+", label: "Projects completed" },
-  { value: "99+", label: "Reviews given" },
+  { value: "10+", label: "Satisfied clients" },
+  { value: "20+", label: "Projects completed" },
+  { value: "6+", label: "Reviews given" },
 ];
 
 // Skills Data - Note: Icon components should be imported in the component
@@ -176,4 +176,3 @@ export const openWhatsApp = (message: string) => {
   const whatsappUrl = `https://wa.me/${PERSONAL_INFO.whatsappNumber}?text=${encodedMessage}`;
   window.open(whatsappUrl, "_blank");
 };
-
